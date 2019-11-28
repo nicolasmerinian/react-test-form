@@ -1,11 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-const Home = () => {
+const Home = props => {
+  let history = useHistory();
+
+  function onStartClick() {
+    history.push('/page1');
+  }
+
   return (
   	<div>
-  	  <h1>Question 1</h1>
-      <input type="checkbox" id="switch" />
-      <label for="switch">Toggle</label>
+      <button onClick={ onStartClick }>Start</button>
   	</div>
   );
 };
