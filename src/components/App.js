@@ -12,13 +12,13 @@ import Page1 from './Page1';
 class App extends React.Component {
   render() {
     return (
-        <Layout>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/page1' component={Page1} />
-            <Redirect to="/" />
-          </Switch>
-        </Layout>
+      <Layout>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/page1' component={Page1} />
+          <Redirect to="/" />
+        </Switch>
+      </Layout>
     );
   }
 }
