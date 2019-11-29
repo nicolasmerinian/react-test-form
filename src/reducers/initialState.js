@@ -3,6 +3,7 @@ export default {
     class: '',
     gender: '',
     skinColor: '',
-    eyeColor: ''
+    eyeColor: '',
+    hairColor: ''
   }
 };

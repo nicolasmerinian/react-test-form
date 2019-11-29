@@ -8,6 +8,7 @@ import Page1Form from './Page1Form';
 import Page2Form from './Page2Form';
 import Page3Form from './Page3Form';
 import Page4Form from './Page4Form';
+import Page5Form from './Page5Form';
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Route path='/page2' component={Page2Form} />
           <Route path='/page3' component={Page3Form} />
           <Route path='/page4' component={Page4Form} />
+          <Route path='/page5' component={Page5Form} />
           <Redirect to="/" />
         </Switch>
       </Layout>
