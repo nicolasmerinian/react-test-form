@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import {
   getCharacterClass,
   saveCharacterClass
@@ -16,6 +17,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Page2Form = props => {
+  let history = useHistory();
   // Pass the useFormik() hook initial form values and a submit function that
   // will be called when the form is submitted
   const formik = useFormik({
@@ -24,6 +26,7 @@ const Page2Form = props => {
     },
     onSubmit: values => {
       props.saveCharacterClass(values.charClass);
+      history.push('/page3');
     },
   });
 
