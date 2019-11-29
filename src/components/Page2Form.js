@@ -3,9 +3,7 @@ import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import {
   getCharacterClass,
-  getCharacterGender,
-  saveCharacterClass,
-  saveCharacterGender
+  saveCharacterClass
 } from '../actions/characterActions';
 
 const mapStateToProps = characterState => ({
