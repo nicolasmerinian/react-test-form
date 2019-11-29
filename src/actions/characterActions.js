@@ -20,7 +20,8 @@ export function saveCharacterClass(payload) {
 
 export function getCharacterClass() {
   return {
-    type: GET_CHARACTER_CLASS
+    type: GET_CHARACTER_CLASS,
+    payload
   }
 }
 
@@ -33,7 +34,8 @@ export function saveCharacterClothesColor(payload) {
 
 export function getCharacterClothesColor() {
   return {
-    type: GET_CHARACTER_CLOTHES_COLOR
+    type: GET_CHARACTER_CLOTHES_COLOR,
+    payload
   }
 }
 
@@ -46,7 +48,8 @@ export function saveCharacterEyeColor(payload) {
 
 export function getCharacterEyeColor() {
   return {
-    type: GET_CHARACTER_EYE_COLOR
+    type: GET_CHARACTER_EYE_COLOR,
+    payload
   }
 }
 
@@ -59,7 +62,8 @@ export function saveCharacterGender(payload) {
 
 export function getCharacterGender() {
   return {
-    type: GET_CHARACTER_GENDER
+    type: GET_CHARACTER_GENDER,
+    payload
   }
 }
 
@@ -72,7 +76,8 @@ export function saveCharacterHairColor(payload) {
 
 export function getCharacterHairColor() {
   return {
-    type: GET_CHARACTER_HAIR_COLOR
+    type: GET_CHARACTER_HAIR_COLOR,
+    payload
   }
 }
 
@@ -85,6 +90,7 @@ export function saveCharacterSkinColor(payload) {
 
 export function getCharacterSkinColor() {
   return {
-    type: GET_CHARACTER_SKIN_COLOR
+    type: GET_CHARACTER_SKIN_COLOR,
+    payload
   }
 }
