@@ -17,6 +17,7 @@ const Header = () => {
           <li>
             <NavLink to="/" isActive={checkActive}>Home</NavLink>
             <NavLink to="/page1">Page1</NavLink>
+            <NavLink to="/page2">Page2</NavLink>
           </li>
         </ul>
       </nav>

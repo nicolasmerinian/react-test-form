@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { getCharacterGender, saveCharacterGender } from '../actions/characterActions';
 
 const mapStateToProps = characterState => ({
@@ -13,6 +14,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Page1Form = props => {
+  let history = useHistory();
+
   // Pass the useFormik() hook initial form values and a submit function that
   // will be called when the form is submitted
   const formik = useFormik({
@@ -20,20 +23,17 @@ const Page1Form = props => {
       switch: props.gender
     },
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      console.log(JSON.stringify(values, null, 2));
       const gender = values.switch ? 'F' : 'M';
       props.saveCharacterGender(gender);
+      history.push('/page2');
     },
   });
 
-  function onNextClick() {
-    alert('todo');
-  }
-
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <input id="switch" name="switch" type="checkbox" value={ formik.values.switch } onChange={ formik.handleChange } />
-      <label htmlFor="switch">Toggle</label>
+      <input id="switch" class="switch" name="switch" type="checkbox" value={ formik.values.switch } onChange={ formik.handleChange } />
+      <label class="switch" htmlFor="switch">Toggle</label>
       <button type="submit">Next</button>
       <p></p>
     </form>
