@@ -1,10 +1,10 @@
 export default {
   character: {
     class: '',
-    gender: '',
-    skinColor: '',
+    clothesColor: '',
     eyeColor: '',
+    gender: '',
     hairColor: '',
-    clothesColor: ''
+    skinColor: ''
   }
 };

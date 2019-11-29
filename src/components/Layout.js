@@ -1,7 +1,8 @@
-import Header from './Header';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Provider } from 'react-redux';
+import Header from './Header';
+import Visualizer from './Visualizer';
 import configureStore from '../store/configureStore';
 import initialState from '../reducers/initialState';
 
@@ -13,9 +14,8 @@ const Layout = ({children}) => {
       <Header />
       <Provider store={store}>
         <main>
-          <div>
-            {children}
-          </div>
+          {children}
+          <Visualizer />
         </main>
       </Provider>
     </div>

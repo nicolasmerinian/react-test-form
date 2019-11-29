@@ -10,7 +10,6 @@ body {
   font-weight: 300;
   line-height: 1.4em;
   margin: 0 auto;
-  max-width: 550px;
   min-width: 230px;
   padding: 20px;
 }
@@ -27,8 +26,17 @@ header {
 }
 
 main {
+  display: flex;
+}
+
+form {
   background-color: #EEFFEE;
-  padding: 5px;
+  width: 60%;
+}
+
+.visualizer {
+  background-color: #FFEEEE;
+  width: 40%;
 }
 
 nav {
