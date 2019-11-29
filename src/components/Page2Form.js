@@ -25,7 +25,6 @@ const Page2Form = props => {
       charClass: props.class
     },
     onSubmit: values => {
-      alert(JSON.stringify(values.charClass, null, 2));
       props.saveCharacterClass(values.charClass);
     },
   });

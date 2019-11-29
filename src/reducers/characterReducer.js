@@ -13,8 +13,6 @@ export default function characterReducer(state = initialState.character, action)
   console.log('state', state);
   console.log('action', action);
 
-  debugger;
-
   switch (action.type) {
     case GET_CHARACTER_CLASS:
       newState = Object.assign({}, state);
