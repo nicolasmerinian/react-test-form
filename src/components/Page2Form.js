@@ -18,6 +18,7 @@ const mapDispatchToProps = dispatch => ({
 
 const Page2Form = props => {
   let history = useHistory();
+
   // Pass the useFormik() hook initial form values and a submit function that
   // will be called when the form is submitted
   const formik = useFormik({

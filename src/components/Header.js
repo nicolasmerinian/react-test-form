@@ -19,6 +19,7 @@ const Header = () => {
             <NavLink to="/page1">Page1</NavLink>
             <NavLink to="/page2">Page2</NavLink>
             <NavLink to="/page3">Page3</NavLink>
+            <NavLink to="/page4">Page4</NavLink>
           </li>
         </ul>
       </nav>
