@@ -12,7 +12,11 @@ const Layout = ({children}) => {
     <div>
       <Header />
       <Provider store={store}>
-        <main>{children}</main>
+        <main>
+          <div>
+            {children}
+          </div>
+        </main>
       </Provider>
     </div>
   );
