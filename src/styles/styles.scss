@@ -1,6 +1,10 @@
 /* Variables */
 
 /* Styles */
+html {
+  height: 100%;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -8,35 +12,50 @@ body {
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-smoothing: antialiased;
   font-weight: 300;
+  height: 100%;
   line-height: 1.4em;
   margin: 0 auto;
   min-width: 230px;
+  padding: 0;
 }
 
 #app {
   background: #fff;
+  height: 100%;
 }
 
-header {
+#app > header {
   background-color: #2D303C;
   padding: 5px;
 }
 
-header h1 {
+#app > header h1 {
   color: #D36;
 }
 
 main {
   display: flex;
+  height: 100%;
 }
 
-form {
-  padding: 2rem;
+form, .home {
   width: 100%;
+}
+
+form > header, .home > header {
+  border-bottom: 1px solid #fafafa;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+form > span {
+  padding: 2rem;
 }
 
 .visualizer {
   background-color: #E8E8E8;
+  height: 100%;
   padding: 2rem;
 }
 
@@ -64,6 +83,12 @@ nav a.active:hover {
 
 #visualizerCanvas {
   border: 1px solid black;
+}
+
+.finalContent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* SWITCH */

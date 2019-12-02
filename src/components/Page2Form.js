@@ -37,13 +37,17 @@ const Page2Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <label>Warrior
-        <input type="radio" name="charClass" value="warrior" onChange={ formik.handleChange } />
-      </label>
-      <label>Wizard
-        <input type="radio" name="charClass" value="wizard" onChange={ formik.handleChange } />
-      </label>
-      <button type="submit">Next</button>
+      <header>
+        <button class="customButton" type="submit">Next</button>
+      </header>
+      <span style={{ display: 'flex' }}>
+        <label>Warrior
+          <input type="radio" name="charClass" value="warrior" onChange={ formik.handleChange } />
+        </label>
+        <label>Wizard
+          <input type="radio" name="charClass" value="wizard" onChange={ formik.handleChange } />
+        </label>
+      </span>
     </form>
   );
 };

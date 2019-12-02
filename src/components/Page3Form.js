@@ -33,13 +33,17 @@ const Page3Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <label>White
-        <input type="radio" name="skinColor" value="white" onChange={ formik.handleChange } />
-      </label>
-      <label>Black
-        <input type="radio" name="skinColor" value="black" onChange={ formik.handleChange } />
-      </label>
-      <button type="submit">Next</button>
+      <header>
+        <button class="customButton" type="submit">Next</button>
+      </header>
+      <span style={{ display: 'flex' }}>
+        <label>White
+          <input type="radio" name="skinColor" value="white" onChange={ formik.handleChange } />
+        </label>
+        <label>Black
+          <input type="radio" name="skinColor" value="black" onChange={ formik.handleChange } />
+        </label>
+      </span>
     </form>
   );
 };

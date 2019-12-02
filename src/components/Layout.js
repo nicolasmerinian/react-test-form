@@ -10,7 +10,7 @@ const store = configureStore(initialState);
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <>
       <Header />
       <Provider store={store}>
         <main>
@@ -18,7 +18,7 @@ const Layout = ({children}) => {
           {children}
         </main>
       </Provider>
-    </div>
+    </>
   );
 };
 
