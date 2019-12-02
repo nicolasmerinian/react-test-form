@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header>
-      <h1>Title</h1>
+      <h1>React Character Maker</h1>
       <nav>
         <ul className='navLinks'>
           <li>
