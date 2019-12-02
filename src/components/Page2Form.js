@@ -6,6 +6,7 @@ import {
   getCharacterClass,
   saveCharacterClass
 } from '../actions/characterActions';
+import { handleFieldChange } from '../utils/behaviors';
 
 const mapStateToProps = characterState => ({
   class: characterState.class
@@ -19,20 +20,13 @@ const mapDispatchToProps = dispatch => ({
 const Page2Form = props => {
   let history = useHistory();
 
-  // Pass the useFormik() hook initial form values and a submit function that
-  // will be called when the form is submitted
   const formik = useFormik({
     initialValues: {
       charClass: props.class
     },
     onSubmit: values => {
-      props.saveCharacterClass(values.charClass);
       history.push('/page3');
     },
-  });
-
-  useEffect(() => {
-    // props.saveCharacterClass(values.charClass);
   });
 
   return (
@@ -42,10 +36,12 @@ const Page2Form = props => {
       </header>
       <span style={{ display: 'flex' }}>
         <label>Warrior
-          <input type="radio" name="charClass" value="warrior" onChange={ formik.handleChange } />
+          <input type="radio" name="charClass" value="warrior"
+              onChange={ e => handleFieldChange(e, props.saveCharacterClass) } />
         </label>
         <label>Wizard
-          <input type="radio" name="charClass" value="wizard" onChange={ formik.handleChange } />
+          <input type="radio" name="charClass" value="wizard"
+              onChange={ e => handleFieldChange(e, props.saveCharacterClass) } />
         </label>
       </span>
     </form>

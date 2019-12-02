@@ -6,6 +6,7 @@ import {
   getCharacterHairColor,
   saveCharacterHairColor
 } from '../actions/characterActions';
+import { handleFieldChange } from '../utils/behaviors';
 
 const mapStateToProps = characterState => ({
   hairColor: characterState.hairColor
@@ -19,14 +20,11 @@ const mapDispatchToProps = dispatch => ({
 const Page5Form = props => {
   let history = useHistory();
 
-  // Pass the useFormik() hook initial form values and a submit function that
-  // will be called when the form is submitted
   const formik = useFormik({
     initialValues: {
       hairColor: props.hairColor
     },
     onSubmit: values => {
-      props.saveCharacterHairColor(values.hairColor);
       history.push('/page6');
     },
   });
@@ -38,10 +36,12 @@ const Page5Form = props => {
       </header>
       <span style={{ display: 'flex' }}>
         <label>Blond
-          <input type="radio" name="hairColor" value="blond" onChange={ formik.handleChange } />
+          <input type="radio" name="hairColor" value="blond"
+              onChange={ e => handleFieldChange(e, props.saveCharacterHairColor) } />
         </label>
         <label>Brown
-          <input type="radio" name="hairColor" value="brown" onChange={ formik.handleChange } />
+          <input type="radio" name="hairColor" value="brown"
+              onChange={ e => handleFieldChange(e, props.saveCharacterHairColor) } />
         </label>
       </span>
     </form>

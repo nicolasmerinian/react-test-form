@@ -6,6 +6,7 @@ import {
   getCharacterClothesColor,
   saveCharacterClothesColor
 } from '../actions/characterActions';
+import { handleFieldChange } from '../utils/behaviors';
 
 const mapStateToProps = characterState => ({
   clothesColor: characterState.clothesColor
@@ -19,14 +20,11 @@ const mapDispatchToProps = dispatch => ({
 const Page6Form = props => {
   let history = useHistory();
 
-  // Pass the useFormik() hook initial form values and a submit function that
-  // will be called when the form is submitted
   const formik = useFormik({
     initialValues: {
       clothesColor: props.clothesColor
     },
     onSubmit: values => {
-      props.saveCharacterClothesColor(values.clothesColor);
       history.push('/final');
     },
   });
@@ -38,10 +36,12 @@ const Page6Form = props => {
       </header>
       <span style={{ display: 'flex' }}>
         <label>Red
-          <input type="radio" name="clothesColor" value="red" onChange={ formik.handleChange } />
+          <input type="radio" name="clothesColor" value="red"
+              onChange={ e => handleFieldChange(e, props.saveCharacterClothesColor) } />
         </label>
         <label>Black
-          <input type="radio" name="clothesColor" value="black" onChange={ formik.handleChange } />
+          <input type="radio" name="clothesColor" value="black"
+              onChange={ e => handleFieldChange(e, props.saveCharacterClothesColor) } />
         </label>
       </span>
     </form>
