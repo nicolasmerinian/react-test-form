@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { drawCharacter } from '../utils/draw';
+import { clearCanvas, drawCharacter } from '../utils/draw';
 
 const mapStateToProps = state => {
   const characterState = state.character;
@@ -30,6 +30,7 @@ const Visualizer = props => {
   useEffect(() => {
     const ctx = canvasRef.getContext('2d');
     if (ctx) {
+      clearCanvas(ctx, canvasRef.width, canvasRef.height);
       draw(ctx, props);
     } else {
       console.warn('Cannot draw: undefined ctx');

@@ -23,6 +23,10 @@ const eyeColors = {
   'blue': '#2a91cc'
 };
 
+export function clearCanvas(ctx, width, height) {
+  ctx.clearRect(0, 0, width, height);
+}
+
 export function drawCharacter(ctx, gender, skinColor, hairColor, eyeColor, charClass, clotheColor) {
   drawBody(ctx, gender, skinColors[skinColor], hairColors[hairColor]);
   drawEyes(ctx, eyeColors[eyeColor]);
