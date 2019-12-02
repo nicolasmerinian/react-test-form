@@ -27,7 +27,7 @@ const Page6Form = props => {
     },
     onSubmit: values => {
       props.saveCharacterClothesColor(values.clothesColor);
-      // history.push('/page7');
+      history.push('/final');
     },
   });
 
