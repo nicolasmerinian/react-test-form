@@ -10,7 +10,7 @@ const Home = props => {
 
   return (
   	<div>
-      <button onClick={ onStartClick }>Start</button>
+      <button class="customButton" onClick={ onStartClick }>Start</button>
   	</div>
   );
 };

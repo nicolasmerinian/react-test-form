@@ -4,7 +4,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  color: #4d4d4d;
+  color: #222;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-smoothing: antialiased;
   font-weight: 300;
@@ -18,8 +18,12 @@ body {
 }
 
 header {
-  background-color: #EEEEFF;
+  background-color: #2D303C;
   padding: 5px;
+}
+
+header h1 {
+  color: #D36;
 }
 
 main {
@@ -27,27 +31,31 @@ main {
 }
 
 form {
-  background-color: #EEFFEE;
-  width: 60%;
+  padding: 2rem;
+  width: 100%;
 }
 
 .visualizer {
-  background-color: #FFEEEE;
-  width: 40%;
+  background-color: #E8E8E8;
+  padding: 2rem;
 }
 
-nav {
+.visualizer canvas {
+  background-color: #fff;
+}
 
+nav ul {
+  list-style-type: none;
 }
 
 nav a {
-  color: black;
+  color: #fcfcfc;
   margin-right: 0.5rem;
   text-decoration: none;
 }
 
 nav a.active {
-  color: blue;
+  color: #D36;
 }
 
 nav a.active:hover {
@@ -55,7 +63,7 @@ nav a.active:hover {
 }
 
 #visualizerCanvas {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 /* SWITCH */
@@ -164,4 +172,21 @@ label.switch:active:after {
 	height: 8px;
 	border-radius: 50%;
 	background: white;
+}
+
+
+.customButton {
+  background-color: #F58;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 6rem;
+}
+
+.customButton:hover {
+  background-color: #D36;
+  cursor: pointer;
 }

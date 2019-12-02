@@ -14,8 +14,8 @@ const Layout = ({children}) => {
       <Header />
       <Provider store={store}>
         <main>
-          {children}
           <Visualizer />
+          {children}
         </main>
       </Provider>
     </div>
