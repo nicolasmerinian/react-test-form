@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
+  "name": "react-character-maker",
   "version": "7.0.1",
-  "description": "Starter kit for creating apps with React and Redux",
+  "description": "Small app to practice using React and Redux",
   "engines": {
     "node": ">=8",
     "npm": ">=3"
@@ -29,7 +29,7 @@
     "open:cover": "npm run test:cover && open-cli ./coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
+  "author": "Nicolas Merinian",
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "16.10.2",
@@ -105,23 +105,11 @@
     "webpack-hot-middleware": "2.25.0"
   },
   "keywords": [
-    "react",
-    "reactjs",
-    "react-router",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "redux",
-    "flux",
-    "boilerplate",
-    "starter"
+    "react"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": "https://github.com/nicolasmerinian/react-test-form"
   },
   "jest": {
     "moduleNameMapper": {
