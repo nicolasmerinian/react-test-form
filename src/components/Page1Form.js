@@ -32,8 +32,13 @@ const Page1Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <input id="switch" class="switch" name="switch" type="checkbox" value={ formik.values.switch } onChange={ formik.handleChange } />
-      <label class="switch" htmlFor="switch">Toggle</label>
+      <span style={{ display: 'flex' }}>
+        <label style={{ paddingTop: '0.3rem' }}>Man</label>
+        <input id="switch" class="switch" name="switch" type="checkbox"
+            value={ formik.values.switch } onChange={ formik.handleChange } />
+        <label class="switch" htmlFor="switch">Toggle</label>
+        <label style={{ paddingTop: '0.4rem', marginLeft: '0.6rem' }}>Woman</label>
+      </span>
       <button type="submit">Next</button>
       <p></p>
     </form>

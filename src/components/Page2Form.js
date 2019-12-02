@@ -1,4 +1,4 @@
-import React from 'react';
+ import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -29,6 +29,10 @@ const Page2Form = props => {
       props.saveCharacterClass(values.charClass);
       history.push('/page3');
     },
+  });
+
+  useEffect(() => {
+    // props.saveCharacterClass(values.charClass);
   });
 
   return (

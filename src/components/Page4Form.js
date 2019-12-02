@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -29,6 +29,10 @@ const Page4Form = props => {
       props.saveCharacterEyeColor(values.eyeColor);
       history.push('/page5');
     },
+  });
+
+  useEffect(() => {
+    // props.saveCharacterClass(values.charClass);
   });
 
   return (
