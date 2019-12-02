@@ -38,7 +38,6 @@ const Visualizer = props => {
 
   return (
     <div class="visualizer">
-      <p>{ JSON.stringify(props) }</p>
       <canvas id="visualizerCanvas" ref={(canvas) => { canvasRef = canvas; }}
           width="200" height="200"></canvas>
     </div>
