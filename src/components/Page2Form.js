@@ -33,7 +33,7 @@ const Page2Form = props => {
 
   function handleChange(e) {
     setCharClass(e.target.value);
-    handleFieldChange(e, props.saveCharacterClass);
+    handleFieldChange(props.saveCharacterClass, e.target.value);
   }
 
   return (

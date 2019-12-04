@@ -30,7 +30,7 @@ const Page1Form = props => {
 
   function handleChange(e) {
     setGender(e.target.value);
-    handleFieldChange(e, props.saveCharacterGender);
+    handleFieldChange(props.saveCharacterGender, e.target.value);
   }
 
   return (

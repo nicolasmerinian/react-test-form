@@ -33,7 +33,7 @@ const Page4Form = props => {
 
   function handleChange(e) {
     setEyeColor(e.target.value);
-    handleFieldChange(e, props.saveCharacterEyeColor);
+    handleFieldChange(props.saveCharacterEyeColor, e.target.value);
   }
 
   return (

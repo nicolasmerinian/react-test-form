@@ -1,1 +1,1 @@
-export const handleFieldChange = (e, fn) => fn(e.target.value);
+export const handleFieldChange = (fn, args) => fn(args);

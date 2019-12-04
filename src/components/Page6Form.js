@@ -33,7 +33,7 @@ const Page6Form = props => {
 
   function handleChange(e) {
     setClothesColor(e.target.value);
-    handleFieldChange(e, props.saveCharacterClothesColor);
+    handleFieldChange(props.saveCharacterClothesColor, e.target.value);
   }
 
   return (

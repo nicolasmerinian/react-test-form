@@ -33,7 +33,7 @@ const Page5Form = props => {
 
   function handleChange(e) {
     setHairColor(e.target.value);
-    handleFieldChange(e, props.saveCharacterHairColor);
+    handleFieldChange(props.saveCharacterHairColor, e.target.value);
   }
 
   return (

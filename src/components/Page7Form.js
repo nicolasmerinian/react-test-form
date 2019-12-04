@@ -33,7 +33,7 @@ const Page7Form = props => {
 
   function handleChange(e) {
     setName(e.target.value);
-    handleFieldChange(e, props.saveCharacterName);
+    handleFieldChange(props.saveCharacterName, e.target.value);
   }
 
   return (
