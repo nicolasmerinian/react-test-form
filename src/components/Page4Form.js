@@ -40,21 +40,21 @@ const Page4Form = props => {
     <form onSubmit={ formik.handleSubmit }>
       <FormHeader back={ '/page3' } next={ '/page5' } disabled={ !eyeColor }/>
       <span>
-        <label className="labelButton">Blue
-          <input type="radio" name="eyeColor" value="blue"
-              onChange={ handleChange } />
+        <input id="radioEyeBlue" type="radio" name="eyeColor" value="blue"
+            onChange={ handleChange } />
+        <label htmlFor="radioEyeBlue" className="labelButton">Blue
         </label>
-        <label className="labelButton">Brown
-          <input type="radio" name="eyeColor" value="brown"
-              onChange={ handleChange } />
+        <input id="radioEyeBrown" type="radio" name="eyeColor" value="brown"
+            onChange={ handleChange } />
+        <label htmlFor="radioEyeBrown" className="labelButton">Brown
         </label>
-        <label className="labelButton">Green
-          <input type="radio" name="eyeColor" value="green"
-              onChange={ handleChange } />
+        <input id="radioEyeGreen" type="radio" name="eyeColor" value="green"
+            onChange={ handleChange } />
+        <label htmlFor="radioEyeGreen" className="labelButton">Green
         </label>
-        <label className="labelButton">Red
-          <input type="radio" name="eyeColor" value="red"
-              onChange={ handleChange } />
+        <input id="radioEyeRed" type="radio" name="eyeColor" value="red"
+            onChange={ handleChange } />
+        <label htmlFor="radioEyeRed" className="labelButton">Red
         </label>
       </span>
     </form>

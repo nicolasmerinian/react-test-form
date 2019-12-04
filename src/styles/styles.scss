@@ -31,6 +31,7 @@ body {
 
 #app > header h1 {
   color: #D36;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px;
 }
 
 main {
@@ -59,6 +60,10 @@ form > span {
   padding: 2rem;
 }
 
+form > span > input {
+  display: none;
+}
+
 form > span > label.labelButton {
   border: 1px solid #F58;
   border-radius: 0.2rem;
@@ -76,8 +81,8 @@ form > span > label.labelButton:hover {
   cursor: pointer;
 }
 
-form > span > label > input {
-  display: none;
+form > span > input:checked+label.labelButton {
+  background-color: #F58;
 }
 
 .visualizer {
@@ -98,6 +103,7 @@ nav a {
   color: #fcfcfc;
   margin-right: 0.5rem;
   text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px;
 }
 
 nav a.active {
@@ -263,7 +269,7 @@ label.switch:active:after {
   font-weight: 500;
   line-height: 1.4rem;
   text-align: center;
-  text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
 }
 
 .nameForm label {
@@ -274,5 +280,6 @@ label.switch:active:after {
 .nameForm input {
   border: 1px solid #F58;
   border-radius: 5px;
+  color: #999;
   padding: 0.5rem 1rem;
 }

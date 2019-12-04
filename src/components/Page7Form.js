@@ -41,7 +41,8 @@ const Page7Form = props => {
       <FormHeader back={ '/page6' } next={ '/final' } disabled={ !name }/>
       <span>
         <label htmlFor="name">Give your character a name</label>
-        <input id="name" type="text" name="name" onChange={ handleChange } />
+        <input id="name" type="text" name="name" onChange={ handleChange }
+            style={{ display: 'block' }}/>
       </span>
     </form>
   );

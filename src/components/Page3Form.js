@@ -40,18 +40,15 @@ const Page3Form = props => {
     <form onSubmit={ formik.handleSubmit }>
       <FormHeader back={ '/page2' } next={ '/page4' } disabled={ !skinColor }/>
       <span>
-        <label className="labelButton">White
-          <input type="radio" name="skinColor" value="white"
-              onChange={ handleChange } />
-        </label>
-        <label className="labelButton">Yellow
-          <input type="radio" name="skinColor" value="yellow"
-              onChange={ handleChange } />
-        </label>
-        <label className="labelButton">Black
-          <input type="radio" name="skinColor" value="black"
-              onChange={ handleChange } />
-        </label>
+        <input id="radioSkinWhite" type="radio" name="skinColor" value="white"
+            onChange={ handleChange } />
+        <label htmlFor="radioSkinWhite" className="labelButton">White</label>
+        <input id="radioSkinYellow" type="radio" name="skinColor" value="yellow"
+            onChange={ handleChange } />
+        <label htmlFor="radioSkinYellow" className="labelButton">Yellow</label>
+        <input id="radioSkinBlack" type="radio" name="skinColor" value="black"
+            onChange={ handleChange } />
+        <label htmlFor="radioSkinBlack" className="labelButton">Black</label>
       </span>
     </form>
   );

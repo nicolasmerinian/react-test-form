@@ -40,14 +40,12 @@ const Page6Form = props => {
     <form onSubmit={ formik.handleSubmit }>
       <FormHeader back={ '/page5' } next={ '/page7' } disabled={ !clothesColor }/>
       <span>
-        <label className="labelButton">Red
-          <input type="radio" name="clothesColor" value="red"
-              onChange={ handleChange } />
-        </label>
-        <label className="labelButton">Black
-          <input type="radio" name="clothesColor" value="black"
-              onChange={ handleChange } />
-        </label>
+        <input id="radioClothesRed" type="radio" name="clothesColor" value="red"
+            onChange={ handleChange } />
+        <label htmlFor="radioClothesRed" className="labelButton">Red</label>
+        <input id="radioClothesBlack" type="radio" name="clothesColor" value="black"
+            onChange={ handleChange } />
+        <label htmlFor="radioClothesBlack" className="labelButton">Black</label>
       </span>
     </form>
   );

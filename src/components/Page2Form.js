@@ -40,14 +40,12 @@ const Page2Form = props => {
     <form onSubmit={ formik.handleSubmit }>
       <FormHeader back={ '/page1' } next={ '/page3' } disabled={ !charClass }/>
       <span>
-        <label className="labelButton">Warrior
-          <input type="radio" name="charClass" value="warrior"
-              onChange={ handleChange } />
-        </label>
-        <label className="labelButton">Wizard
-          <input type="radio" name="charClass" value="wizard"
-              onChange={ handleChange } />
-        </label>
+        <input id="radioClassWarrior" type="radio" name="charClass" value="warrior"
+            onChange={ handleChange } />
+        <label htmlFor="radioClassWarrior" className="labelButton">Warrior</label>
+        <input id="radioClassWizard" type="radio" name="charClass" value="wizard"
+            onChange={ handleChange } />
+        <label htmlFor="radioClassWizard" className="labelButton">Wizard</label>
       </span>
     </form>
   );
