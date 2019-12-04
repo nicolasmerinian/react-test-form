@@ -59,7 +59,7 @@ const Visualizer = props => {
     <div className="visualizer">
       <canvas id="visualizerCanvas" ref={(canvas) => { canvasRef = canvas; }}
           width="200" height="200"></canvas>
-      <p class="nameLabel">{ formatName(props.name) }</p>
+      <p className="nameLabel">{ formatName(props.name) }</p>
     </div>
   );
 };

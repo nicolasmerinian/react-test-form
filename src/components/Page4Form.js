@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import FormHeader from './FormHeader';
 import {
   getCharacterEyeColor,
   saveCharacterEyeColor
@@ -37,10 +38,7 @@ const Page4Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <header>
-        <button className="customButton" type="submit"
-            disabled={ !eyeColor }>Next</button>
-      </header>
+      <FormHeader back={ '/page3' } next={ '/page5' } disabled={ !eyeColor }/>
       <span style={{ display: 'flex' }}>
         <label>Blue
           <input type="radio" name="eyeColor" value="blue"

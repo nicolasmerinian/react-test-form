@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import FormHeader from './FormHeader';
 import {
   getCharacterClothesColor,
   saveCharacterClothesColor
@@ -37,10 +38,7 @@ const Page6Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <header>
-        <button className="customButton" type="submit"
-            disabled={ !clothesColor }>Next</button>
-      </header>
+      <FormHeader back={ '/page5' } next={ '/page7' } disabled={ !clothesColor }/>
       <span style={{ display: 'flex' }}>
         <label>Red
           <input type="radio" name="clothesColor" value="red"

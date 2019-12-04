@@ -2,6 +2,7 @@
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import FormHeader from './FormHeader';
 import {
   getCharacterClass,
   saveCharacterClass
@@ -37,10 +38,7 @@ const Page2Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <header>
-        <button className="customButton" type="submit"
-            disabled={ !charClass }>Next</button>
-      </header>
+      <FormHeader back={ '/page1' } next={ '/page3' } disabled={ !charClass }/>
       <span style={{ display: 'flex' }}>
         <label>Warrior
           <input type="radio" name="charClass" value="warrior"

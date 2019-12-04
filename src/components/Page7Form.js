@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import FormHeader from './FormHeader';
 import {
   getCharacterName,
   saveCharacterName
@@ -37,10 +38,7 @@ const Page7Form = props => {
 
   return (
     <form className="nameForm" onSubmit={ formik.handleSubmit }>
-      <header>
-        <button className="customButton" type="submit"
-            disabled={ !name }>Next</button>
-      </header>
+      <FormHeader back={ '/page6' } next={ '/final' } disabled={ !name }/>
       <span style={{ display: 'flex' }}>
         <label htmlFor="name">Give your character a name</label>
         <input id="name" type="text" name="name" onChange={ handleChange } />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useFormik, Formik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import FormHeader from './FormHeader';
 import { getCharacterGender, saveCharacterGender } from '../actions/characterActions';
 import { handleFieldChange } from '../utils/behaviors';
 
@@ -34,10 +35,7 @@ const Page1Form = props => {
 
   return (
     <form onSubmit={ formik.handleSubmit }>
-      <header>
-        <button className="customButton" type="submit"
-            disabled={ !gender }>Next</button>
-      </header>
+      <FormHeader back={ '/home' } next={ '/page2' } disabled={ !gender }/>
       <span style={{ display: 'flex' }}>
         <label>Woman
           <input type="radio" name="gender" value="F"
