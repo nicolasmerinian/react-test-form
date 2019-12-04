@@ -44,6 +44,10 @@ const Page3Form = props => {
           <input type="radio" name="skinColor" value="white"
               onChange={ handleChange } />
         </label>
+        <label className="labelButton">Yellow
+          <input type="radio" name="skinColor" value="yellow"
+              onChange={ handleChange } />
+        </label>
         <label className="labelButton">Black
           <input type="radio" name="skinColor" value="black"
               onChange={ handleChange } />

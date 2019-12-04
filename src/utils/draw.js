@@ -16,11 +16,14 @@ const hairColors = {
 };
 const skinColors = {
   'black': '#684e3c',
-  'white': '#f7e2d3'
+  'white': '#f7e2d3',
+  'yellow': '#f7eed3'
 };
 const eyeColors = {
   'blue': '#2a91cc',
-  'brown': '#4F1904'
+  'brown': '#4F1904',
+  'green': '#317b34',
+  'red': '#a84049'
 };
 
 export function clearCanvas(ctx, width, height) {
