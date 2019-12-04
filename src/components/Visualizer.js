@@ -52,14 +52,14 @@ const Visualizer = props => {
   }
 
   function formatName(name) {
-    return formatFullName(formatFullName(name.toLowerCase(), "'"), '-');
+    return formatFullName(formatFullName(formatFullName(name.toLowerCase(), "'"), '-'), ' ');
   }
 
   return (
     <div className="visualizer">
       <canvas id="visualizerCanvas" ref={(canvas) => { canvasRef = canvas; }}
           width="200" height="200"></canvas>
-      <p>{ formatName(props.name) }</p>
+      <p class="nameLabel">{ formatName(props.name) }</p>
     </div>
   );
 };

@@ -224,3 +224,19 @@ label.switch:active:after {
   background: #ccc;
   cursor: not-allowed;
 }
+
+.nameLabel {
+  font-family: fantasy;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  text-align: center;
+  
+
+background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
