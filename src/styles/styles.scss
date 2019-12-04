@@ -50,6 +50,7 @@ form > header, .home > header {
 }
 
 form > span {
+  justify-content: center;
   padding: 2rem;
 }
 
@@ -226,17 +227,26 @@ label.switch:active:after {
 }
 
 .nameLabel {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-color: #666666;
+  color: transparent;
   font-family: fantasy;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
   text-align: center;
-  
+  text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
 
-background-color: #666666;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+.nameForm label {
+  line-height: 1.8rem;
+  margin-right: 1rem;
+}
+
+.nameForm input {
+  border: 1px solid #F58;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
 }

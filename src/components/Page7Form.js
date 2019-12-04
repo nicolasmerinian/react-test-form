@@ -36,13 +36,13 @@ const Page7Form = props => {
   }
 
   return (
-    <form onSubmit={ formik.handleSubmit }>
+    <form className="nameForm" onSubmit={ formik.handleSubmit }>
       <header>
         <button className="customButton" type="submit"
             disabled={ !name }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>
-        <label htmlFor="name">Give your character a name:</label>
+        <label htmlFor="name">Give your character a name</label>
         <input id="name" type="text" name="name" onChange={ handleChange } />
       </span>
     </form>
