@@ -38,7 +38,7 @@ const Page3Form = props => {
   return (
     <form onSubmit={ formik.handleSubmit }>
       <header>
-        <button class="customButton" type="submit"
+        <button className="customButton" type="submit"
             disabled={ !skinColor }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>

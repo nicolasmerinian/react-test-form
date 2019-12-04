@@ -9,9 +9,9 @@ const Home = props => {
   }
 
   return (
-  	<div class="home">
+  	<div className="home">
       <header>
-        <button class="customButton" onClick={ onStartClick }>Start</button>
+        <button className="customButton" onClick={ onStartClick }>Start</button>
       </header>
   	</div>
   );

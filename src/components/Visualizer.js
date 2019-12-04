@@ -4,12 +4,14 @@ import { clearCanvas, drawCharacter } from '../utils/draw';
 
 const mapStateToProps = state => {
   const characterState = state.character;
+
   return {
     class: characterState.class,
     clothesColor: characterState.clothesColor,
     eyeColor: characterState.eyeColor,
     gender: characterState.gender,
     hairColor: characterState.hairColor,
+    name: characterState.name,
     skinColor: characterState.skinColor
   }
 };
@@ -37,10 +39,27 @@ const Visualizer = props => {
     }
   });
 
+  function formatSubName(subname) {
+    return subname
+        .substr(0, 1).toUpperCase()
+        .concat(subname.substr(1));
+  }
+
+  function formatFullName(fullname, separator) {
+    return fullname
+        .split(separator).map(formatSubName)
+        .join(separator);
+  }
+
+  function formatName(name) {
+    return formatFullName(formatFullName(name.toLowerCase(), "'"), '-');
+  }
+
   return (
-    <div class="visualizer">
+    <div className="visualizer">
       <canvas id="visualizerCanvas" ref={(canvas) => { canvasRef = canvas; }}
           width="200" height="200"></canvas>
+      <p>{ formatName(props.name) }</p>
     </div>
   );
 };

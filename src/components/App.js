@@ -10,6 +10,7 @@ import Page3Form from './Page3Form';
 import Page4Form from './Page4Form';
 import Page5Form from './Page5Form';
 import Page6Form from './Page6Form';
+import Page7Form from './Page7Form';
 import FinalPage from './FinalPage';
 
 // This is a class-based component because the current
@@ -27,6 +28,7 @@ class App extends React.Component {
           <Route path='/page4' component={Page4Form} />
           <Route path='/page5' component={Page5Form} />
           <Route path='/page6' component={Page6Form} />
+          <Route path='/page7' component={Page7Form} />
           <Route path='/final' component={FinalPage} />
           <Redirect to="/" />
         </Switch>

@@ -22,6 +22,7 @@ const Header = () => {
             <NavLink to="/page4">Page4</NavLink>
             <NavLink to="/page5">Page5</NavLink>
             <NavLink to="/page6">Page6</NavLink>
+            <NavLink to="/page7">Page7</NavLink>
             <NavLink to="/final">End</NavLink>
           </li>
         </ul>

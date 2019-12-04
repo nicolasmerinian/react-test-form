@@ -26,7 +26,7 @@ const Page6Form = props => {
       clothesColor: props.clothesColor
     },
     onSubmit: _ => {
-      history.push('/final');
+      history.push('/page7');
     },
   });
 
@@ -38,7 +38,7 @@ const Page6Form = props => {
   return (
     <form onSubmit={ formik.handleSubmit }>
       <header>
-        <button class="customButton" type="submit"
+        <button className="customButton" type="submit"
             disabled={ !clothesColor }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>
