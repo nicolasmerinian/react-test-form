@@ -5,7 +5,7 @@ export default {
     eyeColor: '',
     gender: '',
     hairColor: '',
-    name: '',
+    name: '?',
     skinColor: ''
   }
 };
