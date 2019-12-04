@@ -81,6 +81,10 @@ nav a.active:hover {
   cursor: default;
 }
 
+nav a:visited {
+  //color: #F00;
+}
+
 #visualizerCanvas {
   border: 1px solid black;
 }
@@ -214,4 +218,9 @@ label.switch:active:after {
 .customButton:hover {
   background-color: #D36;
   cursor: pointer;
+}
+
+.customButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }

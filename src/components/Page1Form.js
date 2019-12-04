@@ -1,5 +1,5 @@
-import React from 'react';
-import { useFormik } from 'formik';
+import React, { useState } from 'react';
+import { useFormik, Formik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getCharacterGender, saveCharacterGender } from '../actions/characterActions';
@@ -15,30 +15,37 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Page1Form = props => {
+  const [ gender, setGender ] = useState('');
   let history = useHistory();
 
   const formik = useFormik({
     initialValues: {
       switch: props.gender
     },
-    onSubmit: values => {
+    onSubmit: _ => {
       history.push('/page2');
     },
   });
 
+  function handleChange(e) {
+    setGender(e.target.value);
+    handleFieldChange(e, props.saveCharacterGender);
+  }
+
   return (
     <form onSubmit={ formik.handleSubmit }>
       <header>
-        <button class="customButton" type="submit">Next</button>
+        <button class="customButton" type="submit"
+            disabled={ !gender }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>
         <label>Woman
           <input type="radio" name="gender" value="F"
-              onChange={ e => handleFieldChange(e, props.saveCharacterGender) } />
+              onChange={ handleChange } />
         </label>
         <label>Man
           <input type="radio" name="gender" value="M"
-              onChange={ e => handleFieldChange(e, props.saveCharacterGender) } />
+              onChange={ handleChange } />
         </label>
       </span>
     </form>

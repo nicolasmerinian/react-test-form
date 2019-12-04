@@ -1,4 +1,4 @@
- import React, { useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -18,30 +18,37 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Page2Form = props => {
+  const [ charClass, setCharClass ] = useState('');
   let history = useHistory();
 
   const formik = useFormik({
     initialValues: {
       charClass: props.class
     },
-    onSubmit: values => {
+    onSubmit: _ => {
       history.push('/page3');
     },
   });
 
+  function handleChange(e) {
+    setCharClass(e.target.value);
+    handleFieldChange(e, props.saveCharacterClass);
+  }
+
   return (
     <form onSubmit={ formik.handleSubmit }>
       <header>
-        <button class="customButton" type="submit">Next</button>
+        <button class="customButton" type="submit"
+            disabled={ !charClass }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>
         <label>Warrior
           <input type="radio" name="charClass" value="warrior"
-              onChange={ e => handleFieldChange(e, props.saveCharacterClass) } />
+              onChange={ handleChange } />
         </label>
         <label>Wizard
           <input type="radio" name="charClass" value="wizard"
-              onChange={ e => handleFieldChange(e, props.saveCharacterClass) } />
+              onChange={ handleChange } />
         </label>
       </span>
     </form>

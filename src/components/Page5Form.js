@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -18,30 +18,37 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Page5Form = props => {
+  const [ hairColor, setHairColor ] = useState('');
   let history = useHistory();
 
   const formik = useFormik({
     initialValues: {
       hairColor: props.hairColor
     },
-    onSubmit: values => {
+    onSubmit: _ => {
       history.push('/page6');
     },
   });
 
+  function handleChange(e) {
+    setHairColor(e.target.value);
+    handleFieldChange(e, props.saveCharacterHairColor);
+  }
+
   return (
     <form onSubmit={ formik.handleSubmit }>
       <header>
-        <button class="customButton" type="submit">Next</button>
+        <button class="customButton" type="submit"
+            disabled={ !hairColor }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>
         <label>Blond
           <input type="radio" name="hairColor" value="blond"
-              onChange={ e => handleFieldChange(e, props.saveCharacterHairColor) } />
+              onChange={ handleChange } />
         </label>
         <label>Brown
           <input type="radio" name="hairColor" value="brown"
-              onChange={ e => handleFieldChange(e, props.saveCharacterHairColor) } />
+              onChange={ handleChange } />
         </label>
       </span>
     </form>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -18,30 +18,37 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Page3Form = props => {
+  const [ skinColor, setSkinColor ] = useState('');
   let history = useHistory();
 
   const formik = useFormik({
     initialValues: {
       skinColor: props.skinColor
     },
-    onSubmit: values => {
+    onSubmit: _ => {
       history.push('/page4');
     },
   });
 
+  function handleChange(e) {
+    setSkinColor(e.target.value);
+    handleFieldChange(e, props.saveCharacterSkinColor);
+  }
+
   return (
     <form onSubmit={ formik.handleSubmit }>
       <header>
-        <button class="customButton" type="submit">Next</button>
+        <button class="customButton" type="submit"
+            disabled={ !skinColor }>Next</button>
       </header>
       <span style={{ display: 'flex' }}>
         <label>White
           <input type="radio" name="skinColor" value="white"
-              onChange={ e => handleFieldChange(e, props.saveCharacterSkinColor) } />
+              onChange={ handleChange } />
         </label>
         <label>Black
           <input type="radio" name="skinColor" value="black"
-              onChange={ e => handleFieldChange(e, props.saveCharacterSkinColor) } />
+              onChange={ handleChange } />
         </label>
       </span>
     </form>
