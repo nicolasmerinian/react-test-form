@@ -10,7 +10,7 @@ const Home = props => {
 
   return (
   	<div className="home">
-      <header>
+      <header className="centerFlexContainer">
         <button className="customButton" onClick={ onStartClick }>Start</button>
       </header>
   	</div>

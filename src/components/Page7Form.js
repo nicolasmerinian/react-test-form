@@ -39,7 +39,7 @@ const Page7Form = props => {
   return (
     <form className="nameForm" onSubmit={ formik.handleSubmit }>
       <FormHeader back={ '/page6' } next={ '/final' } disabled={ !name }/>
-      <span style={{ display: 'flex' }}>
+      <span>
         <label htmlFor="name">Give your character a name</label>
         <input id="name" type="text" name="name" onChange={ handleChange } />
       </span>

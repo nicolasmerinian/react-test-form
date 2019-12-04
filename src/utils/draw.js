@@ -19,8 +19,8 @@ const skinColors = {
   'white': '#f7e2d3'
 };
 const eyeColors = {
-  'black': '#222',
-  'blue': '#2a91cc'
+  'blue': '#2a91cc',
+  'brown': '#4F1904'
 };
 
 export function clearCanvas(ctx, width, height) {

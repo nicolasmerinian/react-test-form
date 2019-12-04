@@ -38,6 +38,10 @@ main {
   height: 100%;
 }
 
+.centerFlexContainer {
+  justify-content: center !important;
+}
+
 form, .home {
   width: 100%;
 }
@@ -50,8 +54,30 @@ form > header, .home > header {
 }
 
 form > span {
+  display: flex;
   justify-content: center;
   padding: 2rem;
+}
+
+form > span > label.labelButton {
+  border: 1px solid #F58;
+  border-radius: 0.2rem;
+  color: #000;
+  height: 2rem;
+  line-height: 1.9rem;
+  margin-right: 2rem;
+  text-align: center;
+  width: 5.5rem;
+}
+
+form > span > label.labelButton:hover {
+  background-color: #F58;
+  color: #fff;
+  cursor: pointer;
+}
+
+form > span > label > input {
+  display: none;
 }
 
 .visualizer {

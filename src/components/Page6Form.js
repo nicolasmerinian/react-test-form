@@ -39,12 +39,12 @@ const Page6Form = props => {
   return (
     <form onSubmit={ formik.handleSubmit }>
       <FormHeader back={ '/page5' } next={ '/page7' } disabled={ !clothesColor }/>
-      <span style={{ display: 'flex' }}>
-        <label>Red
+      <span>
+        <label className="labelButton">Red
           <input type="radio" name="clothesColor" value="red"
               onChange={ handleChange } />
         </label>
-        <label>Black
+        <label className="labelButton">Black
           <input type="radio" name="clothesColor" value="black"
               onChange={ handleChange } />
         </label>
