@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import characterReducer from './characterReducer';
 import { connectRouter } from 'connected-react-router'
+import characterReducer from './characterReducer';
+import charactersReducer from './charactersReducer';
 
 const rootReducer = history => combineReducers({
   router: connectRouter(history),
-  character: characterReducer,
+  inProgress: characterReducer,
+  characters: charactersReducer
 });
 
 export default rootReducer;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { clearCanvas, drawCharacter } from '../utils/draw';
 
 const mapStateToProps = state => {
-  const characterState = state.character;
+  const characterState = state.inProgress;
 
   return {
     class: characterState.class,

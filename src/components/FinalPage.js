@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { saveCharacter } from '../utils/storage';
 
 const mapStateToProps = state => {
-  const characterState = state.character;
+  const characterState = state.inProgress;
 
   return {
     class: characterState.class,

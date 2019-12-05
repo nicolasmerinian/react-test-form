@@ -1,4 +1,3 @@
-
 import initialState from './initialState';
 import {
   GET_CHARACTER_CLASS,
@@ -17,13 +16,14 @@ import {
   SAVE_CHARACTER_SKIN_COLOR
 } from '../actions/characterActions';
 
-export default function characterReducer(state = initialState.character, action) {
+export default function characterReducer(state = initialState.inProgress, action) {
   let newState = Object.assign({}, state);
 
   console.log('state', state);
   console.log('action', action);
 
   switch (action.type) {
+
     case GET_CHARACTER_CLASS:
       newState = Object.assign({}, state);
       return newState;

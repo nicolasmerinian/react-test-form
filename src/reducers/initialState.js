@@ -1,5 +1,6 @@
 export default {
-  character: {
+  characters: [],
+  inProgress: {
     class: '',
     clothesColor: '',
     eyeColor: '',

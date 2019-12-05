@@ -1,3 +1,4 @@
+export const GET_CHARACTERS = 'GET_CHARACTERS';
 export const GET_CHARACTER_CLASS = 'GET_CHARACTER_CLASS';
 export const GET_CHARACTER_CLOTHES_COLOR = 'GET_CHARACTER_CLOTHES_COLOR';
 export const GET_CHARACTER_EYE_COLOR = 'GET_CHARACTER_EYE_COLOR';
@@ -5,6 +6,7 @@ export const GET_CHARACTER_GENDER = 'GET_CHARACTER_GENDER';
 export const GET_CHARACTER_HAIR_COLOR = 'GET_CHARACTER_HAIR_COLOR';
 export const GET_CHARACTER_NAME = 'GET_CHARACTER_NAME';
 export const GET_CHARACTER_SKIN_COLOR = 'GET_CHARACTER_SKIN_COLOR';
+export const SAVE_CHARACTERS = 'SAVE_CHARACTERS';
 export const SAVE_CHARACTER_CLASS = 'SAVE_CHARACTER_CLASS';
 export const SAVE_CHARACTER_CLOTHES_COLOR = 'SAVE_CHARACTER_CLOTHES_COLOR';
 export const SAVE_CHARACTER_EYE_COLOR = 'SAVE_CHARACTER_EYE_COLOR';
@@ -12,6 +14,24 @@ export const SAVE_CHARACTER_GENDER = 'SAVE_CHARACTER_GENDER';
 export const SAVE_CHARACTER_HAIR_COLOR = 'SAVE_CHARACTER_HAIR_COLOR';
 export const SAVE_CHARACTER_NAME = 'SAVE_CHARACTER_NAME';
 export const SAVE_CHARACTER_SKIN_COLOR = 'SAVE_CHARACTER_SKIN_COLOR';
+
+
+export function saveCharacters(payload) {
+  return {
+    type: SAVE_CHARACTERS,
+    payload
+  }
+}
+
+export function getCharacters() {
+  return {
+    type: GET_CHARACTERS,
+    payload
+  }
+}
+
+
+
 
 export function saveCharacterClass(payload) {
   return {
