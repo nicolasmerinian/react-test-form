@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { initStorage } from '../utils/storage';
+import { initStorage, isStorageInitialized } from '../utils/storage';
 
 const Home = props => {
   let history = useHistory();
 
-  useEffect(_ => initStorage());
+  useEffect(_ => {
+    if (!isStorageInitialized()) initStorage();
+  });
 
   function onStartClick() {
     history.push('/page1');

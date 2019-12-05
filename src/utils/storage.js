@@ -14,5 +14,7 @@ export const saveCharacter = (rowCharacter) => {
 
 export const initStorage = _ => setCharacters(JSON.stringify(initialData));
 
+export const isStorageInitialized = _ => getCharacters() !== null;
+
 const getCharacters = _ => window.localStorage.getItem(characterKey);
 const setCharacters = chars => window.localStorage.setItem(characterKey, chars);
