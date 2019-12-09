@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { saveCharacter } from '../utils/storage';
+import { saveCharacters } from '../actions/characterActions';
+import { getCharacters } from '../utils/storage';
 
 const mapStateToProps = state => {
   const characterState = state.inProgress;
@@ -16,11 +18,22 @@ const mapStateToProps = state => {
   }
 };
 
+const mapDispatchToProps = {
+  saveCharacters
+}
+
 const FinalPage = props => {
 
   function onSave() {
     console.log('onSave');
-    saveCharacter(props);
+    saveCharacter(props).then(_ => {
+      console.log('onSave ok');
+      const charactersFromStorage = getCharacters();
+      props.saveCharacters(charactersFromStorage);
+      console.log('onSave ok2');
+    }).catch(_ => {
+      console.log('onSave ko');
+    });
   }
 
   return (
@@ -35,4 +48,4 @@ const FinalPage = props => {
   );
 };
 
-export default connect(mapStateToProps)(FinalPage);
+export default connect(mapStateToProps, mapDispatchToProps)(FinalPage);

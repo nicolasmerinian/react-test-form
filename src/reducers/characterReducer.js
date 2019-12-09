@@ -19,9 +19,6 @@ import {
 export default function characterReducer(state = initialState.inProgress, action) {
   let newState = Object.assign({}, state);
 
-  console.log('state', state);
-  console.log('action', action);
-
   switch (action.type) {
 
     case GET_CHARACTER_CLASS:
