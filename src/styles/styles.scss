@@ -42,7 +42,18 @@ main {
 .explorer {
   background-color: #646877;
   border-right: 2px solid #5a5d68;
+  height: 100%;
   width: 18rem;
+}
+
+.explorer header {
+  color: #F58;
+  margin: 0.5rem;
+}
+
+.explorer ul {
+  color: white;
+  list-style-type: none;
 }
 
 .centerFlexContainer {
@@ -251,8 +262,8 @@ label.switch:active:after {
   color: white;
   font-size: 0.875rem;
   font-weight: 500;
-  height: 2.5rem;
-  width: 6rem;
+  height: 3rem;
+  width: 9rem;
 }
 
 .customButton:hover {

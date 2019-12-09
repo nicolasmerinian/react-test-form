@@ -16,7 +16,7 @@ const Home = props => {
   return (
   	<div className="home">
       <header className="centerFlexContainer">
-        <button className="customButton" onClick={ onStartClick }>Start</button>
+        <button className="customButton" onClick={ onStartClick }>Create a new character</button>
       </header>
   	</div>
   );

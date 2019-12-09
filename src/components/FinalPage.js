@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { saveCharacter } from '../utils/storage';
 import { saveCharacters } from '../actions/characterActions';
 import { getCharacters } from '../utils/storage';
@@ -23,16 +24,15 @@ const mapDispatchToProps = {
 }
 
 const FinalPage = props => {
+let history = useHistory();
 
   function onSave() {
-    console.log('onSave');
     saveCharacter(props).then(_ => {
-      console.log('onSave ok');
       const charactersFromStorage = getCharacters();
       props.saveCharacters(charactersFromStorage);
-      console.log('onSave ok2');
+      history.push('/home');
     }).catch(_ => {
-      console.log('onSave ko');
+      alert('character save failed');
     });
   }
 
